@@ -7,6 +7,10 @@ public class City
     public string Type { get; set; }
     public int Rank { get; set; }
     public string LocalizedName { get; set; }
+    public string FullDescription 
+    { 
+        get => $"{LocalizedName}, {Country?.LocalizedName} ({Country.ID})"; 
+    }
     public Area Country { get; set; }
     public Area AdministrativeArea { get; set; }
 }
